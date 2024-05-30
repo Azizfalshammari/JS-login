@@ -31,16 +31,13 @@ async function signUp() {
     var password = document.getElementById('password');
     var passwordError = document.getElementById('passwordError');
     
-    // Add event listener for form submission
     signUpForm.addEventListener('submit', function validate(event) {
-        event.preventDefault(); // Prevent the form from submitting the traditional way
+        event.preventDefault(); 
         
-        // Clear previous error messages
         usernameError.textContent = '';
         emailError.textContent = '';
         passwordError.textContent = '';
 
-        // Perform validation
         var isValid = true;
         
         if (username.value.trim().length <= 5) {
@@ -66,7 +63,6 @@ async function signUp() {
     });
 
     function validateEmail(email) {
-        // Simple email validation regex
         var re = /^(([^<>()\[\]\.,;:\s@"]+(.[^<>()\[\]\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\.,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,})$/i;
         return re.test(String(email).toLowerCase());
     }
