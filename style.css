@@ -1,0 +1,15 @@
+body {
+    overflow-x: hidden;
+  }
+  .row {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .col {
+    padding: 5px;
+  }
+  .col img {
+    max-width: 100%;
+    height: auto;
+  }
